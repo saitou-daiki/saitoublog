@@ -1,0 +1,142 @@
+.l-header.site-header
+  .navi.hide
+    .navi_home
+      %a.white{href: root_path,alt: "HOME",color: "white"}
+        %span.nomal home
+        %span.hover ホーム
+    %ul.navi_list
+
+      %li
+        %a.white{href: root_path}
+          %span.nomal registation
+          %span.hover 新規登録
+      %li
+        %a.white{href: root_path}
+          %span.nomal login
+          %span.hover ログイン
+
+      %li
+        %a.white{href: root_path}
+          %span.nomal NEW
+          %span.hover 投稿する
+      %li
+        %a.white{href: root_path}
+          %span.nomal logout
+          %span.hover ログアウト
+
+      %li
+        %a.white{href: root_path}
+          %span.nomal about
+          %span.hover 自己紹介
+      %li
+        %a.white{href: '#portfolio'}
+          %span.nomal portfolio
+          %span.hover ポートフォリオ
+      %li
+        %a.white{href: '#contact'}
+          %span.nomal contact
+          %span.hover お問い合わせ先
+      
+
+          
+.main-advertising.position-fixed.slick
+  = link_to '#0' do
+    = image_tag 'irabu.jpg', :height => "480", :width => "100%" 
+
+  = link_to '#0' do
+    = image_tag 'mori.jpg', :height => "480", :width => "100%"
+
+  = link_to '#0' do
+    = image_tag 'greatbarrier.jpg', :height => "480", :width => "100%"
+
+.l-content
+  .l-column-main
+    .m-article-lis
+      %article.m-article.js-article.wow.fadein.clearfix
+        %figure.m-article_image
+          = image_tag 'tita-umi.jpeg', width: "546", height: "290"
+        .m-article_text-block
+          .m-article_text-block-top
+            = link_to root_path do
+              %h2.m-article_title 「ここじゃない世界」に行きたかった　アイルランド紀行
+              %p.m-article_date 2019.07.29
+              %p.m-article_summary 「じゃあ、アイルランドはどうですか？ ダブリンは良い街ですよ。少し雨が多いけど……」留学先を探していたとき、そう提案された。他の候補地はどこも魅惑的なビーチやナイトクラブが自慢で、開放的になりきれ ...
+        
+      %article.m-article.js-article.wow.fadein.clearfix
+        %figure.m-article_image
+          = image_tag 'tita-umi.jpeg', width: "546", height: "290"
+        .m-article_text-block
+          .m-article_text-block-top
+            = link_to root_path do
+              %h2.m-article_title 「ここじゃない世界」に行きたかった　アイルランド紀行
+              %p.m-article_date 2019.07.29
+              %p.m-article_summary 「じゃあ、アイルランドはどうですか？ ダブリンは良い街ですよ。少し雨が多いけど……」留学先を探していたとき、そう提案された。他の候補地はどこも魅惑的なビーチやナイトクラブが自慢で、開放的になりきれ ...
+
+      %article.m-article.js-article.wow.fadein.clearfix
+        %figure.m-article_image
+          = image_tag 'tita-umi.jpeg', width: "546", height: "290"
+        .m-article_text-block
+          .m-article_text-block-top
+            = link_to root_path do
+              %h2.m-article_title 「ここじゃない世界」に行きたかった　アイルランド紀行
+              %p.m-article_date 2019.07.29
+              %p.m-article_summary 「じゃあ、アイルランドはどうですか？ ダブリンは良い街ですよ。少し雨が多いけど……」留学先を探していたとき、そう提案された。他の候補地はどこも魅惑的なビーチやナイトクラブが自慢で、開放的になりきれ ...
+
+      %p.m-read-more#portfolio
+        = link_to root_path do
+          portfolio
+      .m-article2.displayflex
+        %article.m-article-list2
+          =link_to root_path do
+            .m-article2_image
+              = image_tag  'tita-umi.jpeg', width: "290", height: "150"
+            .m-article2_text-block
+              %h2 クイズアプリ
+              %p ドットインストールの動画教材を元に作成しました。
+    
+        %article.m-article-list2
+          =link_to root_path do
+            .m-article2_image
+              = image_tag  'tita-umi.jpeg', width: "290", height: "150"
+              .m-article2_text-block
+                %h2 クイズアプリ
+                %p ドットインストールの動画教材を元に作成。
+    
+        %article.m-article-list2
+          =link_to root_path do
+            .m-article2_image
+              = image_tag  'tita-umi.jpeg', width: "290", height: "150"
+            .m-article2_text-block
+              %h2.m-article2_title クイズアプリ
+              %p.m-article2_views ドットインストールの動画教材を元に作成。
+        
+
+
+
+#tf-contact
+  .container
+    .section-title
+      %h3
+      %hr ---
+  .contact-#contact
+    .contact-item.email saitouabcblue@icloud.com
+    %p.contact-item or
+    .contact-item.snsc
+      %ul.list-inline
+        %li
+          =link_to 'https://www.facebook.com/daiki.saitou.9' do
+            = fa_icon 'facebook', class: "facebook-icon"
+        %li
+          =link_to 'https://twitter.com/saitou311099' do
+            = fa_icon 'twitter', class: "facebook-icon"
+        %li
+          =link_to 'https://github.com/feelspecial/freemarket_sample_61c' do
+            = fa_icon 'github', class: "facebook-icon"
+
+
+
+
+
+
+
+
