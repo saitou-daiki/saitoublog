@@ -1,6 +1,7 @@
 class TweetsController < ApplicationController
   def index
-    @tweets = Tweet.order('id DESK').limit(20)
+
+    @tweets = Tweet.order('id DESC').limit(20)
   end
 
   def new
