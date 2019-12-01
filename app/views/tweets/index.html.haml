@@ -1,33 +1,44 @@
-.l-header.site-header
+
+.site-header.l-header
   .navi.hide
     .navi_home
       %a.white{href: root_path,alt: "HOME",color: "white"}
         %span.nomal home
         %span.hover ホーム
     %ul.navi_list
+      -if user_signed_in?
+        %li
+          =link_to new_tweet_path do
+
+            %span.nomal NEW
+            %span.hover 投稿する
+        %li
+          =link_to destroy_user_session_path, method: :delete do
+         
+            %span.nomal log out
+            %span.hover ログアウト
+      -else
+        %li
+          %a.white{href: new_user_registration_path}
+            %span.nomal registation
+            %span.hover 新規登録
+        %li
+          %a.white{href: new_user_session_path}
+            %span.nomal login
+            %span.hover ログイン
 
       %li
-        %a.white{href: root_path}
-          %span.nomal registation
-          %span.hover 新規登録
-      %li
-        %a.white{href: root_path}
-          %span.nomal login
-          %span.hover ログイン
+        %a.white{href: '#list'}
+          %span.nomal List of posts
+          %span.hover 投稿一覧
 
-      %li
-        %a.white{href: root_path}
-          %span.nomal NEW
-          %span.hover 投稿する
-      %li
-        %a.white{href: root_path}
-          %span.nomal logout
-          %span.hover ログアウト
 
       %li
         %a.white{href: root_path}
           %span.nomal about
           %span.hover 自己紹介
+
+
       %li
         %a.white{href: '#portfolio'}
           %span.nomal portfolio
@@ -36,6 +47,8 @@
         %a.white{href: '#contact'}
           %span.nomal contact
           %span.hover お問い合わせ先
+
+  
       
 
           
@@ -49,7 +62,7 @@
   = link_to '#0' do
     = image_tag 'greatbarrier.jpg', :height => "480", :width => "100%"
 
-.l-content
+.l-content#list
   .l-column-main
     .m-article-lis
       %article.m-article.js-article.wow.fadein.clearfix

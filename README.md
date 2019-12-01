@@ -30,6 +30,7 @@ Things you may want to cover:
 |email|string|null: false|
 |password|string|null: false|
 |image|text|
+|name|string|
 ### Association
 - has_many :tweets
 - has_many :comments
