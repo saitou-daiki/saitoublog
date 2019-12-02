@@ -34,7 +34,7 @@
 
 
       %li
-        %a.white{href: root_path}
+        %a.white{href: '#about'}
           %span.nomal about
           %span.hover 自己紹介
 
@@ -60,40 +60,59 @@
   = link_to '#0' do
     = image_tag 'greatbarrier.jpg', :height => "480", :width => "100%"
 
+
+
 .l-content#list
   .l-column-main
-    .m-article-lis
+    .m-article-lis.fadein
       = render @tweets
 
+      %p.m-read#about
+        自己紹介
+
+      %article.m-article.js-article.wow.fadein.clearfix
+        %figure.m-article_image
+          = image_tag 'tita-umi.jpeg', class: 'lower-message__image', width: '400px',height: '300px'
+        .m-article_text-block
+          .m-article_text-block-top
+            = link_to '#0' do
+              %h2.m-article_title 
+                名前：斎藤大輝
+              %p.m-article_date 
+                エンジニアとしての就活中の斎藤と申します。
+              %p.m-article_summary 
+                某大手警備会社を退職後、TECH::EXPERTを卒業し就活中の身です。日々に備忘録としても活用できるといいいと思い、こちらのブログを作成しました。
 
 
-      %p.m-read-more#portfolio
+
+
+      %p.m-read#portfolio.white
         = link_to root_path do
           portfolio
       .m-article2.displayflex
         %article.m-article-list2
-          =link_to root_path do
+          =link_to '#0' do
             .m-article2_image
-              = image_tag  'tita-umi.jpeg', width: "290", height: "150"
+              = image_tag  'miniblog.png', width: "290", height: "150"
             .m-article2_text-block
-              %h2 クイズアプリ
-              %p ドットインストールの動画教材を元に作成しました。
+              %h2 ミニブログ
+              %p TECH::EXPERTの応用カリキュラムで、ミニブログを作成しました。新規登録やログイン、投稿機能などの最低限の機能が使用できます。
     
-        %article.m-article-list2
-          =link_to root_path do
+        %article.m-article-list2.fadein
+          =link_to '#0' do
             .m-article2_image
-              = image_tag  'tita-umi.jpeg', width: "290", height: "150"
-              .m-article2_text-block
-                %h2 クイズアプリ
-                %p ドットインストールの動画教材を元に作成。
+              = image_tag  'chatapp.png', width: "290", height: "150"
+              .m-article2_text-block.fadein
+                %h2 チャットアプリ
+                %p ユーチューブの動画をもとにチャットアプリを作成しました。非同期通信で、チャットが可能です。
     
-        %article.m-article-list2
-          =link_to root_path do
+        %article.m-article-list2.fadein
+          =link_to '#0' do
             .m-article2_image
-              = image_tag  'tita-umi.jpeg', width: "290", height: "150"
+              = image_tag  'quizapp.png', width: "290", height: "150"
             .m-article2_text-block
               %h2.m-article2_title クイズアプリ
-              %p.m-article2_views ドットインストールの動画教材を元に作成。
+              %p.m-article2_views 三択のクイズアプリです。問題数と、問題の内容をカスタマイズできます。html,css,jsの三つのファイルで作成しました。
         
 
 
@@ -117,11 +136,3 @@
         %li
           =link_to 'https://github.com/feelspecial/freemarket_sample_61c' do
             = fa_icon 'github', class: "facebook-icon"
-
-
-
-
-
-
-
-

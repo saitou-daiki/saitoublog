@@ -186,8 +186,8 @@ div {
 
 
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  // display: -webkit-box;
+  // display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -249,6 +249,12 @@ margin-bottom: 8rem;
 .m-article2{
   width: 30.20833%;
   margin-bottom: 3rem;
+
+  a:hover{
+  opacity: 0.5;    
+  color: skyblue;
+
+  }
 }
 
 .m-article-list2{
@@ -337,4 +343,15 @@ ul {
 a:hover i{
   color: #337ab7;
   text-decoration: none;
+}
+
+.m-read{
+  color: white;
+  margin-top: 4rem;
+  font-size: 40px;
+  font-size: 4rem;
+  font-family: 'Cormorant Upright',serif;
+  text-align: center;
+  line-height: 1.1;
+  margin-bottom: 4rem;
 }
