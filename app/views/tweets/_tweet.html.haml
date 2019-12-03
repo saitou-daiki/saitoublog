@@ -1,0 +1,43 @@
+%article.m-article.js-article.wow.fadein.clearfix
+  %figure.m-article_image
+    = link_to  new_tweet_comment_path(tweet) do
+      = image_tag tweet.image.url, class: 'lower-message__image' if tweet.image.present?
+  .m-article_text-block
+    .m-article_text-block-top
+      = link_to  new_tweet_comment_path(tweet) do
+        %h2.m-article_title 
+          = tweet.title
+        %p.m-article_date 
+          = tweet.created_at.strftime("%Y-%m-%d %H:%M:%S")
+        %p.m-article_summary 
+          = tweet.content
+        - if user_signed_in? && current_user.id ==  tweet.user.id
+
+          = link_to edit_tweet_path(tweet),class: "background-green" do
+            記事を編集する 
+    
+          = link_to tweet_path(tweet),method: :delete,class: "background-red" do
+            記事を削除する
+
+  
+-# %article.m-article.js-article.wow.fadein.clearfix
+-#   %figure.m-article_image
+-#     = image_tag 'tita-umi.jpeg', width: "546", height: "290"
+-#   .m-article_text-block
+-#     .m-article_text-block-top
+-#       = link_to root_path do
+-#         %h2.m-article_title 「ここじゃない世界」に行きたかった　アイルランド紀行
+-#         %p.m-article_date 2019.07.29
+-#         %p.m-article_summary 「じゃあ、アイルランドはどうですか？ ダブリンは良い街ですよ。少し雨が多いけど……」留学先を探していたとき、そう提案された。他の候補地はどこも魅惑的なビーチやナイトクラブが自慢で、開放的になりきれ ...
+
+-# %article.m-article.js-article.wow.fadein.clearfix
+-#   %figure.m-article_image
+-#     = image_tag 'tita-umi.jpeg', width: "546", height: "290"
+-#   .m-article_text-block
+-#     .m-article_text-block-top
+-#       = link_to root_path do
+-#         %h2.m-article_title 「ここじゃない世界」に行きたかった　アイルランド紀行
+-#         %p.m-article_date 2019.07.29
+-#         %p.m-article_summary 「じゃあ、アイルランドはどうですか？ ダブリンは良い街ですよ。少し雨が多いけど……」留学先を探していたとき、そう提案された。他の候補地はどこも魅惑的なビーチやナイトクラブが自慢で、開放的になりきれ ...
+
+-# = image_tag "#{product.images.first.image_url}", size: "180×180"

@@ -1,0 +1,376 @@
+// Place all the styles related to the tweets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  box-sizing: border-box;
+}
+
+// .clearfix{
+//   display: both;
+// }
+
+.article{
+  display: block;
+}
+
+.displayflex{
+  display: flex;
+}
+
+.main-advertising{
+  text-align: center;
+  margin:0 auto;
+  justify-content: center;
+  background-color: #eeeeee;
+  a{
+    width: 100%;
+  }
+}
+
+body{ 
+  
+  // width: 100%;
+  //   min-height: 568px;
+  //   background: #e0e7e8;
+  //   font-family: "Custom Yu Gothic","YuGothic","Yu Gothic",Hiragino Sans,Hiragino Kaku Gothic ProN,"Meiryo",sans-serif;
+  //   color: #171717;
+  //   line-height: 1.9;
+  //   letter-spacing: .02em;
+  //   font-size: 15px;
+  //   font-size: 1.5rem;
+
+  width: 100%;
+  min-height: 568px;
+  background: #e0e7e8;
+  font-family: "Custom Yu Gothic","YuGothic","Yu Gothic",Hiragino Sans,Hiragino Kaku Gothic ProN,"Meiryo",sans-serif;
+  color: #171717;
+  line-height: 1.9;
+  letter-spacing: .02em;
+  font-size: 15px;
+  font-size: 1.5rem;
+
+  height: 100%;
+
+  text-rendering: optimizeLegibility;
+}
+
+.l-main {
+  position: relative;
+  width: 100%;
+  padding-top: 72px;
+  padding-bottom: 180px;
+  background: #e0e7e8;
+  // -webkit-transition: background .3s ease 0s;
+  // transition: background .3s ease 0s;
+}
+
+
+
+.position-fixed{
+  position: fixed;
+}
+
+.white{
+  color: white;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+
+
+}
+
+
+
+/* 通常時はホバー時の文字を非表示にする */
+a .hover{
+  display: none;
+
+  }
+  
+  /* ホバー時は通常時の文字を非表示にする */
+  a:hover .nomal{
+  display: none;
+  }
+  
+  /* ホバー時に、ホバー時の文字を表示する */
+  a:hover .hover{
+  display: inline;
+  opacity: 0.5;
+  }
+
+ul, li {
+  list-style: none;
+}
+
+.container{
+  width: 1100px;
+
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.space {
+  padding: 20px;
+}
+
+.media-body {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.intro-thumb{
+  position: relative;
+}
+
+.intro-thumb img {
+  max-width: 270px;
+  position: absolute;
+  // top: 50px;
+  // left: 150px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+// .col-md-6{
+//   width: 50%;
+//   min-width: 992px;
+// }
+
+// .col-md-7{
+//   text-align: right;
+//   width: 58.3%;
+// }
+
+p {
+  font-size: 13px;
+}
+p {
+  margin: 0 0 10px;
+}
+
+div {
+  display: block;
+}
+
+// .intro-thumb{
+  
+//   width: 50%;
+// }
+
+// .intro-messages p{
+//   text-align: right;
+// }
+
+.l-content {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.l-column-main {
+  max-width: 994px;
+  margin: 0 auto;
+}
+
+.p-home .m-article-list {
+  margin-top: 10rem;
+}
+
+.m-article {
+
+
+  position: relative;
+  // display: -webkit-box;
+  // display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 8px 15px;
+  max-width: 994px;
+  margin: 0 auto;
+  line-height: 0;
+  cursor: pointer;
+    &_text-block{
+
+      position: absolute;
+
+      top: 40px;
+      left: 65%;
+
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+      -ms-flex-line-pack: justify;
+      align-content: space-between;
+      width: 39.8773%;
+      line-height: 1.1;
+      z-index: 1;
+      a:hover{  
+        opacity: 0.5;
+      }
+
+      a:hover p,h2 {  
+        opacity: 0.5;
+      }
+    }
+
+    &_image{
+      position: relative;
+      width: 55.82822%;
+      padding-bottom: 29.17505%;
+      background: 50% 50%/cover no-repeat;
+      z-index: 1;
+
+      padding-bottom: 0px;
+      a:hover{  
+        opacity: 0.5;
+      }
+    }
+
+
+}
+
+.m-read-more{
+margin-top: 8rem;
+font-size: 40px;
+font-size: 4rem;
+font-family: 'Cormorant Upright',serif;
+text-align: center;
+line-height: 1.1;
+
+margin-bottom: 8rem;
+}
+
+.m-article2{
+  width: 30.20833%;
+  margin-bottom: 3rem;
+
+  a:hover{
+  opacity: 0.5;    
+  color: skyblue;
+
+  }
+}
+
+.m-article-list2{
+// display: -webkit-box;
+//     display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    width: 100%;
+    margin-top: -17px;
+    margin-right: 10px;
+
+    &_text-block{
+
+    }
+
+    &_image{
+
+      display: block;
+    overflow: hidden;
+    }
+
+    &_views{
+      margin-top: .6rem;
+      font-family: 'Open Sans',sans-serif;
+      font-style: italic;
+      line-height: 1.1;
+      letter-spacing: .04em;
+      font-size: 15px;
+      font-size: 1.5rem;
+      color: #808085;
+      
+    }
+
+    &_title{
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+
+}
+
+#tf-contact{
+background-color: #666;
+    padding: 5% 0;
+    text-align: center;
+    color: white;
+}
+
+.container {
+  width: 1100px;
+}
+
+.list-inline {
+  padding-left: 0;
+  margin-left: -5px;
+  list-style: none;
+}
+
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+#tf-contact .contact-list .contact-item {
+  margin-top: 15px;
+}
+
+.list-inline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+a:hover i{
+  color: #337ab7;
+  text-decoration: none;
+}
+
+.m-read{
+  color: white;
+  margin-top: 4rem;
+  font-size: 40px;
+  font-size: 4rem;
+  font-family: 'Cormorant Upright',serif;
+  text-align: center;
+  line-height: 1.1;
+  margin-bottom: 4rem;
+}
+
+.background-red{
+  color: red;
+  font-size: 13px;
+}
+.background-green{
+  color: green;
+  font-size: 13px;
+}
