@@ -220,6 +220,13 @@ div {
       width: 39.8773%;
       line-height: 1.1;
       z-index: 1;
+      a:hover{  
+        opacity: 0.5;
+      }
+
+      a:hover p,h2 {  
+        opacity: 0.5;
+      }
     }
 
     &_image{
@@ -230,6 +237,9 @@ div {
       z-index: 1;
 
       padding-bottom: 0px;
+      a:hover{  
+        opacity: 0.5;
+      }
     }
 
 
@@ -354,4 +364,13 @@ a:hover i{
   text-align: center;
   line-height: 1.1;
   margin-bottom: 4rem;
+}
+
+.background-red{
+  color: red;
+  font-size: 13px;
+}
+.background-green{
+  color: green;
+  font-size: 13px;
 }

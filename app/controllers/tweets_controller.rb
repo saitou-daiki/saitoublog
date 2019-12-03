@@ -1,7 +1,14 @@
 class TweetsController < ApplicationController
+  before_action :validates_tweet, only: :create
+
+  def validates_tweet
+    @tweet = Tweet.new(title: tweet_params[:title],content: tweet_params[:content] ,image: tweet_params[:image])
+    render '/tweets/new' unless @tweet.valid?
+  end
+
   def index
 
-    @tweets = Tweet.order('id DESC').limit(20)
+    @tweets = Tweet.order('id DESC').limit(5)
   end
 
   def new
@@ -11,6 +18,7 @@ class TweetsController < ApplicationController
 
   def show
      @tweet = Tweet.find(params[:id])
+     @comment = Comment.new
   end
 
   def edit

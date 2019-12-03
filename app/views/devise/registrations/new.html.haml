@@ -1,25 +1,40 @@
-%h2 新規登録
 
-= form_with model: @user, url: user_registration_path, method: :post,id: '', class: 'formnill login-form-inner2-sai', local: true do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+.single-header
+  %h1 
+    =link_to root_path  do
+      = image_tag 'home.jpeg',width: "50px", height: "50px"
+      %p ホームに戻る
+
+.single-main
+  .l-single-container
+    .registation-padding
+      %h2 新規登録
+
+      = form_with model: @user, url: user_registration_path, method: :post,id: '', class: 'formnill login-form-inner2-sai', local: true do |f|
+        = render "devise/shared/error_messages", resource: resource
+        .field
+          = f.label :name
+          %br/
+          = f.text_field :name
+          
+        .field
+          = f.label :email
+          %br/
+          = f.email_field :email, autofocus: true
+        .field
+          = f.label :password
+          - if @minimum_password_length
+            %em
+              (#{@minimum_password_length} characters minimum)
+          %br/
+          = f.password_field :password, autocomplete: "new-password"
+        .field
+          = f.label :password_confirmation
+          %br/
+          = f.password_field :password_confirmation, autocomplete: "new-password"
+        .actions
+          = f.submit "登録する"
+      = render "devise/shared/links"
 
 -# <h2>Sign up</h2>
 

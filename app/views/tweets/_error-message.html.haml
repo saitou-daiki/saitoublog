@@ -1,0 +1,7 @@
+- if tweet.errors.any?
+  
+  - unless tweet.valid?
+    - if errors = tweet.errors.full_messages_for(column.to_sym)
+      %ul.has-error-text
+        - errors.each do |error|
+          %li=error
