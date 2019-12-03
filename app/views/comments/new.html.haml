@@ -23,13 +23,14 @@
       -#   = f.text_area :content, cols: "30", placeholder: "記事の本文を入力してください", rows: "10", class: "textarea-default"
       -# .form-group
       -#   = f.submit "コメントする", class: "btn-default btn-red"
-
-  .item-detail-message
-    .message-content
-      = form_with class: "block",model: @comment,local: true, url:  tweet_comments_path(@tweet),method: :post do |f|
-       
-        = f.text_area :comment, placeholder: "こちらに文章を打ち込んで記事に対してのコメントを書き込めます",class: "textarea-default"
-        = f.submit 'コメントする',class: "message-submit btn-default btn-gray"
+  -if user_signed_in?
+    .item-detail-message
+      .message-content
+      
+        = form_with class: "block",model: @comment,local: true, url:  tweet_comments_path(@tweet),method: :post do |f|
+        
+          = f.text_area :comment, placeholder: "こちらに文章を打ち込んで記事に対してのコメントを書き込めます",class: "textarea-default"
+          = f.submit 'コメントする',class: "message-submit btn-default btn-gray"
 
        
   

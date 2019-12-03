@@ -8,7 +8,7 @@ class TweetsController < ApplicationController
 
   def index
 
-    @tweets = Tweet.order('id DESC').limit(5)
+    @tweets = Tweet.includes(:user).page(params[:page]).per(5).order('id DESC')
   end
 
   def new

@@ -67,6 +67,8 @@
     .m-article-lis.fadein
       = render @tweets
 
+      = paginate(@tweets)
+
       %p.m-read#about
         自己紹介
 
