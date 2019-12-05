@@ -18,5 +18,6 @@ ja:
         image: 画像
         content: 記事の本文
         title: タイトル
+        tag_ids: タグ
       comment:
         comment: コメント

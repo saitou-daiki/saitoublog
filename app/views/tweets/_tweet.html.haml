@@ -11,6 +11,24 @@
           = tweet.created_at.strftime("%Y-%m-%d %H:%M:%S")
         %p.m-article_summary 
           = tweet.content
+          
+          -if tweet.tags.first
+            -if tweet.tags.first.id == 1
+              .pink
+                = "# #{tweet.tags.first.name}"
+            - elsif tweet.tags.first.id == 2
+              .black
+                = "# #{tweet.tags.first.name}"
+            - elsif tweet.tags.first.id == 3
+              .yellow
+                = "# #{tweet.tags.first.name}"
+            - elsif tweet.tags.first.id == 4
+              .blue
+                = "# #{tweet.tags.first.name}"
+            - elsif tweet.tags.first.id == 5
+              .murasaki
+                = "# #{tweet.tags.first.name}"
+            
         - if user_signed_in? && current_user.id ==  tweet.user.id
 
           = link_to edit_tweet_path(tweet),class: "background-green" do
