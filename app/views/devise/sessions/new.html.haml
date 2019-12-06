@@ -1,6 +1,6 @@
 .single-header
   %h1 
-    =link_to root_path  do
+    =link_to root_path, data: {"turbolinks" => false}  do
 
       %p ホームに戻る
 
@@ -24,8 +24,8 @@
           = f.password_field :password, autocomplete: "current-password"
         - if devise_mapping.rememberable?
           .field
-            = f.check_box :remember_me
-            = f.label :remember_me
+            = f.check_box :パスワード記憶
+            = f.label :パスワードを記憶
         .actions
           = f.submit "ログインする"
       = render "devise/shared/links"
