@@ -1,19 +1,19 @@
 
-.site-header.l-header
+.site-header
   .navi.hide
     .navi_home
-      %a.white{href: root_path,alt: "HOME",color: "white"}
+      %a.white{href: '#0',alt: "HOME",color: "white"}
         %span.nomal home
         %span.hover ホーム
     %ul.navi_list
       -if user_signed_in?
         %li
-          =link_to new_tweet_path do
+          =link_to new_tweet_path,class: "white" do
 
             %span.nomal NEW
             %span.hover 投稿する
         %li
-          =link_to destroy_user_session_path, method: :delete do
+          =link_to destroy_user_session_path, method: :delete,class: "white" do
          
             %span.nomal log out
             %span.hover ログアウト
@@ -50,7 +50,7 @@
 
   
           
-.main-advertising.position-fixed.slick
+.main-advertising.position-fixed.slick#0
   = link_to '#0' do
     = image_tag 'irabu.jpg', :height => "480", :width => "100%" 
 

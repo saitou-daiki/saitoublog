@@ -1,6 +1,6 @@
 .single-header
   %h1 
-    =link_to root_path  do
+    =link_to root_path, data: {"turbolinks" => false} do
       = image_tag 'home.jpg',width: "50px", height: "50px"
       %p ホームに戻る
 
@@ -20,8 +20,11 @@
    
         = f.file_field :image, class: 'hidden'
        
+      .form-group 
       
- 
+        = f.collection_select :tag_ids, Tag.all, :id, :name,{prompt: "タグを選択してください"}, { class: "input-default has-error" }
+        
+        =  render partial: 'error-message', locals: {tweet: @tweet, column: "tag_ids"}
       .form-group
 
         = f.text_field :title, class: "input-default has-error",placeholder: "記事のタイトルを入力してください"

@@ -2,12 +2,11 @@ class TweetsController < ApplicationController
   before_action :validates_tweet, only: :create
 
   def validates_tweet
-    @tweet = Tweet.new(title: tweet_params[:title],content: tweet_params[:content] ,image: tweet_params[:image])
+    @tweet = Tweet.new(tag_ids: tweet_params[:tag_ids],title: tweet_params[:title],content: tweet_params[:content] ,image: tweet_params[:image])
     render '/tweets/new' unless @tweet.valid?
   end
 
   def index
-
     @tweets = Tweet.includes(:user).page(params[:page]).per(5).order('id DESC')
   end
 
@@ -56,9 +55,11 @@ class TweetsController < ApplicationController
   end
 
   def tweet_params
-    params.require(:tweet).permit(:title, :image, :content).merge(user_id: current_user.id)
+    params.require(:tweet).permit(:title, :image, :content, :tag_ids).merge(user_id: current_user.id)
     #includesメソッド、app.htmlを変えたことで、nameを減らした。アソシエーションで、nicknameがいらなくなり、無くした影響。
   end
 
 
 end
+
+ 
