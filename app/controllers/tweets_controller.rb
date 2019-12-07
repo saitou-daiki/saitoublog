@@ -47,7 +47,7 @@ class TweetsController < ApplicationController
   def create
     # Tweet.create(name: params[:name], image: params[:image], text: params[:text]) #データを作成し保存する。
     if Tweet.create(tweet_params)
-      redirect_to root_path
+      redirect_to controller: :tweets, action: :index
     else
       render 'tweets/new'
     end
@@ -57,6 +57,15 @@ class TweetsController < ApplicationController
   def tweet_params
     params.require(:tweet).permit(:title, :image, :content, :tag_ids).merge(user_id: current_user.id)
     #includesメソッド、app.htmlを変えたことで、nameを減らした。アソシエーションで、nicknameがいらなくなり、無くした影響。
+  end
+
+  def search
+  
+    # @kyewords = params[:keyword]
+  
+    @keyword = "%#{params[:keyword]}"
+    # @tweets = Tweet.find_by_sql(["select * from tweets where content like ? LIMIT 10", @keyword])
+    @tweets = Tweet.where('content LIKE(?)', "%#{params[:keyword]}%").limit(5)
   end
 
 

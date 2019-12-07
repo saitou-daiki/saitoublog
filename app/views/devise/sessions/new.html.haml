@@ -17,17 +17,17 @@
         .field
           = f.label :email
           %br/
-          = f.email_field :email, autofocus: true
+          = f.email_field :email,class: "input-default",plachholder: "Eメールを入力してください", autofocus: true
         .field
           = f.label :password
           %br/
-          = f.password_field :password, autocomplete: "current-password"
+          = f.password_field :password, class: "input-default",placeholder: "パスワードを入力してください",autocomplete: "current-password"
         - if devise_mapping.rememberable?
           .field
             = f.check_box :パスワード記憶
             = f.label :パスワードを記憶
         .actions
-          = f.submit "ログインする"
+          = f.submit "ログインする",class: "btn-default regi-btn"
       = render "devise/shared/links"
 
 

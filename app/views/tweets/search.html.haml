@@ -1,7 +1,8 @@
 .site-header
   .navi.hide
     .navi_home
-      %a.white{href: '#0',alt: "HOME",color: "white"}
+      = link_to  root_path,class: "white" do
+
         %span.nomal home
         %span.hover ホーム
         
@@ -69,14 +70,22 @@
   = link_to '#0' do
     = image_tag 'greatbarrier.jpg', :height => "480", :width => "100%"
 
-
-
+.search-result
+  -if @tweets.present?
+    = params[:keyword]
+    の検索結果は
+    = @tweets.length
+    件です
+  -else
+    = params[:keyword]
+    の検索結果は特にありません。
 .l-content#list
   .l-column-main
     .m-article-lis.fadein
+
       = render @tweets
 
-      = paginate(@tweets)
+      -# = paginate(@tweets)
 
       %p.m-read#about
         自己紹介

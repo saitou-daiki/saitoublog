@@ -374,3 +374,51 @@ a:hover i{
   color: green;
   font-size: 13px;
 }
+
+.btn-primary{
+  // display: none;
+  // visility: hidden;
+  visibility:hidden;
+  position: relative;
+}
+
+
+
+// .block > :not(.search_query,.fa) {
+//   display: none;
+// }
+
+
+
+.search_query{
+  position: absolute;
+  left:10;
+  height: 40px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 16px;
+
+  
+  width: 180px;
+}
+
+.search_form{
+position: relative;
+}
+
+.btn-icon{
+position: absolute;
+left: 160px;
+bottom: 5px;
+
+visibility:visible;
+cursor: pointer;
+}
+
+.search_form{
+  margin-left: 20px;
+
+}
