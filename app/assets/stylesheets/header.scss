@@ -46,12 +46,12 @@
   height: 70px;
   margin: 0 auto;
   &_home{
-    width: 113px;
+    // width: 113px;
     height: 30px;
     margin: 20px 0;
     float: left;
     position: relative;
-    display: block;
+    display: flex;
   }
 
   &_list{

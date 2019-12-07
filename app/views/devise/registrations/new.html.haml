@@ -14,25 +14,25 @@
         .field
           = f.label :name
           %br/
-          = f.text_field :name, autofocus: true
+          = f.text_field :name,placeholder: "名前を入力してください",class: "input-default",autofocus: true
 
         .field
           = f.label :email
-          %br/
-          = f.email_field :email, autofocus: true
+          = f.email_field :email,placeholder: "Eメールを入力してください",class: "input-default", autofocus: true
         .field
           = f.label :password
           - if @minimum_password_length
             %em
               (#{@minimum_password_length} 最小文字数)
           %br/
-          = f.password_field :password, autocomplete: "new-password"
+          = f.password_field :password,placeholder: "パスワードを入力してください",class: "input-default", autocomplete: "new-password"
         .field
           = f.label :password_confirmation
           %br/
-          = f.password_field :password_confirmation, autocomplete: "new-password"
+          = f.password_field :password_confirmation, placeholder: "パスワード（確認）を入力してください",class: "input-default",autocomplete: "new-password"
         .actions
-          = f.submit "登録する"
+          .form-group
+            = f.submit "登録する",class: "btn-default regi-btn"
       = render "devise/shared/links"
 
 -# <h2>Sign up</h2>
