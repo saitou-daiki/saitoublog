@@ -6,20 +6,20 @@
 
 .single-main
   .l-single-container
-    = form_with class: "block",model: @tweet,local: true, url: tweets_path,method: :post do |f|
-      %h2.l-single-head
-        記事を投稿する
+    %h2.l-single-head
+      記事を投稿する
      
+    = form_with class: "block",model: @tweet,local: true, url: tweets_path,method: :post do |f|
+      
+       
       = f.label :image, class: 'sell-dropbox-container has-error' do
         %pre.visible-pc クリックしてファイルをアップロードできます
         =  render partial: 'error-message', locals: {tweet: @tweet, column: "image"}
+        = f.file_field :image, class: 'image hidden'
       
+        .preview
+          = image_tag @tweet.image.url, class: 'lower-message__image',width: "100%", height: "300px" if @tweet.image.url
 
-      
-        
-   
-        = f.file_field :image, class: 'hidden'
-       
       .form-group 
       
         = f.collection_select :tag_ids, Tag.all, :id, :name,{prompt: "タグを選択してください"}, { class: "input-default has-error" }

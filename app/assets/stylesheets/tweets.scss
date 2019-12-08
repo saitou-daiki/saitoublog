@@ -403,22 +403,25 @@ a:hover i{
 
   
   width: 180px;
+
+  margin-left: 10px;
 }
 
 .search_form{
+
 position: relative;
 }
 
 .btn-icon{
 position: absolute;
-left: 160px;
+left: 175px;
 bottom: 5px;
 
 visibility:visible;
 cursor: pointer;
 }
 
-.search_form{
-  margin-left: 20px;
+// .search_form{
+//   margin-left: 30px;
 
-}
+// }
