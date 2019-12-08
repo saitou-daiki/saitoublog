@@ -13,7 +13,7 @@
         = button_tag type: 'submit', class: 'btn btn-primary' do
           %i.fa.fa-search.btn-icon
 
-    %ul.navi_list
+    %ul.navi_list{"data-turbolinks" => "false"}
       -if user_signed_in?
         %li
           =link_to new_tweet_path,class: "white" do

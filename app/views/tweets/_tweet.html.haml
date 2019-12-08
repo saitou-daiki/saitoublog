@@ -1,4 +1,5 @@
-%article.m-article.js-article.wow.fadein.clearfix
+%article.m-article.js-article.wow.fadein.clearfix{"data-turbolinks" => "false"}
+
   %figure.m-article_image
     = link_to  new_tweet_comment_path(tweet) do
       = image_tag tweet.image.url, class: 'lower-message__image',width: "400" ,height: "270px" if tweet.image.present?

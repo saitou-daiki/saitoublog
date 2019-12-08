@@ -1,0 +1,7 @@
+- if current_user.errors.any?
+  
+  - unless current_user.valid?
+    - if errors = current_user.errors.full_messages_for(column.to_sym)
+      %ul.has-error-text
+        - errors.each do |error|
+          %li=error
