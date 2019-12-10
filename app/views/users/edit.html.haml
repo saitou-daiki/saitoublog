@@ -1,0 +1,28 @@
+.single-header
+  %h1 
+    =link_to root_path, data: {"turbolinks" => false} do
+      %p ホームに戻る
+
+.single-main
+  .l-single-container
+    .registation-padding
+      %h2 アカウントの編集
+      = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+      = link_to "トップページに戻る", :back, class: 'btn'
+    .account-page__inner--right.user-form
+      = form_with model: current_user, url: user_path,method: :patch do |f|
+
+        .field
+          .field-label
+            = f.label :name
+            =  render partial: 'error-user', locals: {current_user: current_user, column: "name"}
+            = render "devise/shared/error_messages", resource: resource
+          .field-input
+            = f.text_field :name, autofocus: true
+        .field
+          .field-label
+            = f.label :email
+          .field-input
+            = f.email_field :email
+        .actions
+          = f.submit "Update", class: 'btn'
