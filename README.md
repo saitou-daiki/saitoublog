@@ -41,6 +41,10 @@ Things you may want to cover:
 ・単体テスト機能（テストコード）実施
 ・ransackを用いた記事検索機能。
 ・タグ付機能
+・コメントの非同期通信
+・インクリメンタルサーチでのツイート検索
+・ユーザー編集
+・フラッシュ表示。
 
 ＜機能の確認方法＞
 ヘッダーにある新規登録ボタンを押して、ユーザーとパスワードとEメールを打ち込むと、
@@ -89,3 +93,14 @@ Things you may want to cover:
 ### Association
 - belongs_to :tweet
 - belongs_to :user
+
+## tweet_tagsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|tweet_id|integer|null: false, foreign_key: true|
+|tag_id|integer|null: false, foreign_key: true|
+
+## tagsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|
