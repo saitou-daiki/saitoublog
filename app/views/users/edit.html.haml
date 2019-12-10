@@ -16,6 +16,7 @@
           .field-label
             = f.label :name
             =  render partial: 'error-user', locals: {current_user: current_user, column: "name"}
+            = render "devise/shared/error_messages", resource: resource
           .field-input
             = f.text_field :name, autofocus: true
         .field

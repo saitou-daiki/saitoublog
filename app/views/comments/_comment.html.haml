@@ -1,0 +1,10 @@
+.comment
+  .comment-name.clearfix
+    
+    %span 名前：
+    - if  comment.user.name
+      = comment.user.name
+    -else 
+      名無しさん。
+  .comment-comment.clearfix
+    = comment.comment

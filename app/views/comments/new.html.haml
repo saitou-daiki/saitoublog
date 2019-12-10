@@ -27,10 +27,10 @@
     .item-detail-message
       .message-content
       
-        = form_with class: "block",model: @comment,local: true, url:  tweet_comments_path(@tweet),method: :post do |f|
+        = form_with id: "new_comment",class: "block",model: [@tweet,@comment],local: true do |f|
         
-          = f.text_area :comment, placeholder: "こちらに文章を打ち込んで記事に対してのコメントを書き込めます",class: "textarea-default"
-          = f.submit 'コメントする',class: "message-submit btn-default btn-gray"
+          = f.text_area :comment, placeholder: "こちらに文章を打ち込んで記事に対してのコメントを書き込めます",class: "textbox textarea-default"
+          = f.submit 'コメントする',class: "form__submit message-submit btn-default btn-gray"
 
        
   
@@ -38,16 +38,5 @@
     .message-content
       %h2.l-single-head
         コメント一覧
-      
-  
-      - @tweet.comments.each do |comment|
-        .comment
-          .comment-name.clearfix
-            
-            %span 名前：
-            - if  comment.user.name
-              = comment.user.name
-            -else 
-              名無しさん。
-          .comment-comment.clearfix
-            = comment.comment
+      .comments
+        = render @comments

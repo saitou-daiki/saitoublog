@@ -75,12 +75,15 @@
 
   = link_to '#0' do
     = image_tag 'greatbarrier.jpg', :height => "480", :width => "100%"
+.search-result 
+  検索結果がこちらに表示されます。
 
 
 
 .l-content#list
   .l-column-main
-    .m-article-lis.fadein
+    .m-article-lis.fadein{"data-turbolinks" => "false"}
+
       = render @tweets
 
       = paginate(@tweets)

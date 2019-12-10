@@ -1,10 +1,11 @@
-%article.m-article.js-article.wow.fadein.clearfix{"data-turbolinks" => "false"}
+.m-article
 
   %figure.m-article_image
     = link_to  new_tweet_comment_path(tweet) do
       = image_tag tweet.image.url, class: 'lower-message__image',width: "400" ,height: "270px" if tweet.image.present?
   .m-article_text-block
-    .m-article_text-block-top
+    .m-article_text-block-top{"data-turbolinks" => "false"}
+
       = link_to  new_tweet_comment_path(tweet) do
         %h2.m-article_title 
           = tweet.title
