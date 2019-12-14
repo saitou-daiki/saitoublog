@@ -52,7 +52,7 @@ $(function(){
 
 
 
-
+//自動更新はここから。
   $(function(){
 
 
@@ -78,9 +78,7 @@ $(function(){
 
 
     var reloadComments = function(){
-      // if (window.location.href.match(/\/tweets\/\d+\/comments\/new\//)){
-
-        if (window.location.href.match(/comments/)){
+      if (window.location.href.match(/\/tweets\/\d+\/comments/)){
 
         var url = 'api/comments' 
         
