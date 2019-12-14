@@ -103,7 +103,7 @@ $(function(){
     })
 
     .fail(function(){
-      alert('error');
+      alert('検索に失敗しました');
     
     });
   });
