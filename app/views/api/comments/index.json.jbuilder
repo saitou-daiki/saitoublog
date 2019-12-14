@@ -6,4 +6,3 @@ json.array! @comments do |comment|
   json.id comment.id
   json.tweet_id comment.tweet_id
 end
-
