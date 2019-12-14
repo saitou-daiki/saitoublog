@@ -5,9 +5,9 @@
         %span.nomal home
         %span.hover ホーム
         
-      -# = form_with class: "search_form",local: true, url: search_tweets_path,method: :get do |f|
-      = search_form_for @search, url: search_tweets_path do |f| 
-        = f.search_field :title_or_content_cont, class: "search_query",placeholder: "記事を検索する",required: ""
+
+      = form_with url: search_tweets_path,method: :get,local: true,class: "search-form" do |f| 
+        = f.text_field :keyword,class: "search_query",placeholder: "記事を検索する",required: ""
         = button_tag type: 'submit', class: 'btn btn-primary' do
           %i.fa.fa-search.btn-icon
 

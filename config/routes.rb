@@ -7,10 +7,10 @@ Rails.application.routes.draw do
   resources :users
   resources :tweets,only: [:index,:new,:edit,:update,:create,:destroy] do
     namespace :api do
-      resources :comments, only: [:new,:index], defaults: { format: 'json' }
+      resources :comments, only: [:index], defaults: { format: 'json' }
     end
 
-    resources :comments, only: [:index, :new, :create]
+    resources :comments, only: [:index, :create]
     collection do
       get 'search'
     end
