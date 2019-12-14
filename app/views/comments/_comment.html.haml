@@ -1,10 +1,10 @@
-.comment
+.comment{"data-comment-id": "#{comment.id}"}
   .comment-name.clearfix
     
     %span 名前：
-    - if  comment.user.name
+    - if  comment.user.name.present?
       = comment.user.name
     -else 
       名無しさん。
-  .comment-comment.clearfix
+  %p#comments.comment-comment.clearfix
     = comment.comment
