@@ -23,14 +23,14 @@ $(function(){
     var html = `
                 <div class="m-article">
                   <figure class="m-article_image">
-                    <a href="/tweets/${tweet.tweet_id}/comments/new">
+                    <a href="/tweets/${tweet.tweet_id}/comments">
 
                       ${image}
                     </a>
                   </figure>
                   <div class="m-article_text-block">
                     <div class="m-article_text-block-top">
-                      <a href="/tweets/${tweet.tweet_id}/comments/new">
+                      <a href="/tweets/${tweet.tweet_id}/comments">
                         <h2 class="m-article_title">
                           ${tweet.title}
 

@@ -2,7 +2,7 @@ $(function(){
 
   function buildComment(comment){
     
-      var html = `<div class="comment"data-comment-id="${comment.id}">>
+      var html = `<div class="comment">
                     <div class="comment-name clearfix">
                       
                       <span>名前：</span>
@@ -15,8 +15,6 @@ $(function(){
                   </div>`
 
       return html;
-
-
   }
 
   $('#new_comment').on('submit', function(e){
@@ -76,27 +74,18 @@ $(function(){
     return html;
   }
 
-//   function buildTweet(tweet){
-//     var html = `/tweets/${tweet.tweet_id}/api/comments/new`
-//     return html;
-// }
+
 
 
     var reloadComments = function(){
       // if (window.location.href.match(/\/tweets\/\d+\/comments\/new\//)){
 
-        // var url = buildTweet(tweet);
-
         if (window.location.href.match(/comments/)){
 
-
-        var url = '../api/comments/new' 
+        var url = 'api/comments' 
         
-       
-        // var url = '/tweets/10/api/comments/new'
         var last_comment_id = $('.comment:last').data('comment-id');
         
-        // /tweets/:tweet_id/api/comments/new(.:format)
         
         $.ajax({
 
