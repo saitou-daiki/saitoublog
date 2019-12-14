@@ -29,7 +29,7 @@
 
 body{ 
   
-  // width: 100%;
+  box-sizing: border-box;
   //   min-height: 568px;
   //   background: #e0e7e8;
   //   font-family: "Custom Yu Gothic","YuGothic","Yu Gothic",Hiragino Sans,Hiragino Kaku Gothic ProN,"Meiryo",sans-serif;
@@ -38,8 +38,8 @@ body{
   //   letter-spacing: .02em;
   //   font-size: 15px;
   //   font-size: 1.5rem;
-  width: 100%;
-  min-height: 568px;
+  // width: 100%;
+  // min-height: 568px;
   background: #e0e7e8;
   font-family: "Custom Yu Gothic","YuGothic","Yu Gothic",Hiragino Sans,Hiragino Kaku Gothic ProN,"Meiryo",sans-serif;
   color: #171717;
