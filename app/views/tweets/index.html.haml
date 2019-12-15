@@ -1,72 +1,5 @@
 .wrapper
-  .site-header
-    .navi.hide
-      .navi_home
-        %a.white{href: '#0',alt: "HOME",color: "white"}
-          %span.nomal home
-          %span.hover ホーム
-          
-
-        = form_with url: search_tweets_path,method: :get,local: true,class: "search-form" do |f| 
-          = f.text_field :keyword,class: "search_query",placeholder: "記事を検索する",required: ""
-          = button_tag type: 'submit', class: 'btn btn-primary' do
-            %i.fa.fa-search.btn-icon
-
-      %ul.navi_list{"data-turbolinks" => "false"}
-        -if user_signed_in?
-          %li
-            =link_to new_tweet_path,class: "white" do
-
-              %span.nomal new
-              %span.hover 投稿する
-          %li
-            =link_to destroy_user_session_path, method: :delete,class: "white" do
-          
-              %span.nomal logout
-              %span.hover ログアウト
-
-          %li
-            =link_to edit_user_path(current_user),class: "white" do
-          
-              %span.nomal edit
-              %span.hover ユーザー編集
-
-        -else
-          %li
-            %a.white{href: new_user_registration_path}
-              %span.nomal registation
-              %span.hover 新規登録
-          %li
-            %a.white{href: new_user_session_path}
-              %span.nomal login
-              %span.hover ログイン
-        
-
-
-
-        %li
-          %a.white{href: '#list'}
-            %span.nomal posts
-            %span.hover 投稿一覧
-
-
-        %li
-          %a.white{href: '#about'}
-            %span.nomal about
-            %span.hover 自己紹介
-
-
-        %li
-          %a.white{href: '#portfolio'}
-            %span.nomal portfolio
-            %span.hover ポートフォリオ
-        %li
-          %a.white{href: '#contact'}
-            %span.nomal contact
-            %span.hover お問い合わせ先
-
-    
-            
+  
   .main-advertising.position-fixed.slick#0
     = link_to '#0' do
       = image_tag 'irabu.jpg', :height => "480", :width => "100%" 
@@ -76,12 +9,15 @@
 
     = link_to '#0' do
       = image_tag 'greatbarrier.jpg', :height => "480", :width => "100%"
-  .search-result 
-    検索結果がこちらに表示されます。
 
 
 
-  .l-content#list
+
+  .l-content
+    = render 'header'
+    .search-result 
+      検索結果がこちらに表示されます。
+    
     .l-column-main
       .m-article-lis.fadein
 
@@ -134,23 +70,4 @@
           
 
 
-
-  #tf-contact
-    .container
-      .section-title
-        %h3
-        %hr ---
-    .contact-#contact
-      .contact-item.email saitouabcblue@icloud.com
-      %p.contact-item or
-      .contact-item.snsc
-        %ul.list-inline
-          %li
-            =link_to 'https://www.facebook.com/daiki.saitou.9' do
-              = fa_icon 'facebook', class: "facebook-icon"
-          %li
-            =link_to 'https://twitter.com/saitou311099' do
-              = fa_icon 'twitter', class: "facebook-icon"
-          %li
-            =link_to 'https://github.com/saitou-daiki/saitoublog' do
-              = fa_icon 'github', class: "facebook-icon"
+  = render 'footer'

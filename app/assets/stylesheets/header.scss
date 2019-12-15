@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   transition: .5s;
-  width: 100%;
+  width: 90%;
   z-index: 999;
 
 /* ヘッダーバーを非表示 */
@@ -43,14 +43,15 @@
  
 .navi {
   background-color: rgba(63, 81, 181, 0.3);
-  min-width: 568px; 
-  width: 1000px;
+  min-width: 568px;
+  width: 100%; 
+  // width: 1000px;
   height: 70px;
   margin: 0 auto;
   &_home{
     // width: 113px;
-    height: 30px;
-    margin: 20px 10px;
+    height: 50px;
+    padding: 10px 10px;
     float: left;
     position: relative;
     display: flex;
@@ -59,6 +60,7 @@
   &_list{
     height: 50px;
     float: right;
+    margin: 10px 0;
 
     li{
     position: relative;

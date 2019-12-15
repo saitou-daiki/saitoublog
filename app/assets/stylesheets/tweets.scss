@@ -323,20 +323,17 @@ background-color: #666;
   list-style: none;
 }
 
-ul, ol {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
 
-ul {
-  display: block;
-  list-style-type: disc;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px;
-}
+
+// ul {
+//   display: block;
+//   list-style-type: disc;
+//   margin-block-start: 1em;
+//   margin-block-end: 1em;
+//   margin-inline-start: 0px;
+//   margin-inline-end: 0px;
+//   padding-inline-start: 40px;
+// }
 
 #tf-contact .contact-list .contact-item {
   margin-top: 15px;
