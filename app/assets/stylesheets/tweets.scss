@@ -5,6 +5,9 @@
   box-sizing: border-box;
 }
 
+.wrapper{
+  overflow: hidden;
+}
 // .clearfix{
 //   display: both;
 // }
@@ -40,6 +43,7 @@ body{
   //   font-size: 1.5rem;
   // width: 100%;
   // min-height: 568px;
+ 
   background: #e0e7e8;
   font-family: "Custom Yu Gothic","YuGothic","Yu Gothic",Hiragino Sans,Hiragino Kaku Gothic ProN,"Meiryo",sans-serif;
   color: #171717;
@@ -49,7 +53,6 @@ body{
   font-size: 1.5rem;
 
   height: 100%;
-
   text-rendering: optimizeLegibility;
 }
 
@@ -163,6 +166,7 @@ p {
 // }
 
 .l-content {
+  
   position: relative;
   width: 100%;
   margin: 0 auto;
