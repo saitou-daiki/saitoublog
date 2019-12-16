@@ -6,11 +6,11 @@
 }
 
 .wrapper{
-  overflow: hidden;
+  overflow-x: hidden;
 }
-// .clearfix{
-//   display: both;
-// }
+.clearfix{
+  display: both;
+}
 
 .article{
   display: block;
@@ -41,7 +41,7 @@ body{
   //   letter-spacing: .02em;
   //   font-size: 15px;
   //   font-size: 1.5rem;
-  // width: 100%;
+  width: 100%;
   // min-height: 568px;
  
   background: #e0e7e8;
@@ -51,7 +51,7 @@ body{
   letter-spacing: .02em;
   font-size: 15px;
   font-size: 1.5rem;
-
+  
   height: 100%;
   text-rendering: optimizeLegibility;
 }
