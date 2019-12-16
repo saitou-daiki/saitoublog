@@ -5,8 +5,8 @@ $(function(){
 
 
   function buildHTML(tweet) {
-    var htmls = `<h1>${tweet.keyword}の検索結果は${tweet.ids}件です</h1>`
-    return htmls;
+    var html = `<h1>${tweet.keyword}の検索結果は${tweet.ids}件です</h1>`
+    return html;
   }
 
 
@@ -60,8 +60,8 @@ $(function(){
     $('.search-result').append(html);
   }
 
-  $(".search_query").on("keyup", function(){
-    var input = $(".search_query").val();
+  $("#search_query").on("keyup", function(){
+    var input = $("#search_query").val();
 
     $.ajax({
       type: 'GET',

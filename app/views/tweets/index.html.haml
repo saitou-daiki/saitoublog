@@ -31,16 +31,51 @@
       %article.m-article.js-article.wow.fadein.clearfix
         %figure.m-article_image
           = image_tag 'hawai.jpg', class: 'lower-message__image', width: '400px',height: '300px'
-        .m-article_text-block
-          .m-article_text-block-top
+        .m-article_profile
+          .m-article_profile-top
             = link_to '#0' do
               %h2.m-article_title 
                 名前：斎藤大輝
               %p.m-article_date 
                 エンジニアとして就活中の斎藤と申します。
-              %p.m-article_summary 
-                某大手警備会社を退職後、TECH::EXPERTを卒業して就活中の身です。日々の備忘録としても活用できるといいと思い、こちらのブログを作成しました。
+              %p.m-article_summary
+                某大手警備会社を退職後、TECH::EXPERTを卒業して現在転職活動中です。
+                %br
+                勤務希望地、名古屋、東京
+                %br
+                言語、HTML、CSS、Ruby、Javascript、jQuery
+                %br
+                サーバーサイドエンジニア及びバックエンドエンジニアを希望しています。フロントなどのデザインよりも機能を実装することでが好きで、本ブログでもスクールで習ったこととポートフォリオの作成もかねて多くの機能を取り入れました。
+              %p.profile-space
+                %br
+                  本ブログで実装した機能は下記の通りとなっております。
+                %br
+                ・インクリメンタルサーチ（記事の内容の非同期通信による検索）
+                %br
+                ・非同期通信。コメントがJSON形式でブラウザに送信される。
+                %br
+                ・自動更新。コメントが７秒ごとにスライドして更新される。
+                %br
+                ・新規登録、ログイン、ログアウト、ユーザー編集機能。
+                %br
+                ・投稿機能（タグ付け、画像投稿、タイトル、記事の本文を送信可能）
+                %br
+                ・投稿機能のバリデーション及びエラーメッセージ
+                %br
+                ・投稿及び投稿内容編集時の画像プレビュー表示。
+                %br
+                ・スムーススクロール
+                %br
+                ・ページネーション
+                %br
+                ・スリック機能（トップページで３枚の画像が数秒ごとに横にスライドされる）
+                %br
+                ・フェードイン表示（スクロールすると画像がスライドして表示される）
+                %br
+                ・投稿した記事の編集及び削除機能
 
+
+                
       %p.m-read#portfolio.white
         = link_to root_path do
           portfolio
