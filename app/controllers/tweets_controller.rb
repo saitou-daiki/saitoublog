@@ -76,7 +76,7 @@ class TweetsController < ApplicationController
 
   def search
     @keyword = "#{params[:keyword]}"
-    @tweets = Tweet.where('title LIKE(?) OR content LIKE(?)', "%#{params[:keyword]}%", "%#{params[:keyword]}%").limit(5)
+    @tweets = Tweet.where('title LIKE(?) OR content LIKE(?)', "%#{params[:keyword]}%", "%#{params[:keyword]}%")
     # @search = Tweet.search(search_params)
     # @tweets = @search.result(distinct: true).order(created_at: 'DESC')
     # binding.pry
@@ -93,11 +93,6 @@ class TweetsController < ApplicationController
   # def search_params
   #   params.require(:q).permit(:title_or_content_cont)
   # end
-
-
-  
-
-
 end
 
  
