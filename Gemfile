@@ -104,3 +104,4 @@ gem 'fog-aws'
 gem 'ransack' 
 
 gem 'jquery-turbolinks'
+gem 'audiojs-rails'
