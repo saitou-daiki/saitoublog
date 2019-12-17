@@ -1,4 +1,5 @@
 = render 'header'
+
 .wrapper
   
   .main-advertising.position-fixed.slick#0
@@ -11,15 +12,13 @@
     = link_to '#0' do
       = image_tag 'greatbarrier.jpg', :height => "480", :width => "100%"
 
-
-
-
   .l-content
-    
+
+    = audio_tag 'menuettm.mp3'
     .search-result 
       検索結果がこちらに表示されます。
     
-    .l-column-main
+    .l-column-main#list
       .m-article-lis.fadein
 
         = render @tweets
@@ -41,11 +40,11 @@
               %p.m-article_summary
                 某大手警備会社を退職後、TECH::EXPERTを卒業して現在転職活動中です。
                 %br
-                勤務希望地、名古屋、東京
+                勤務希望地:名古屋、東京
                 %br
-                言語、HTML、CSS、Ruby、Javascript、jQuery
+                学習中言語:HTML、CSS、Ruby、Javascript、jQuery
                 %br
-                サーバーサイドエンジニア及びバックエンドエンジニアを希望しています。フロントなどのデザインよりも機能を実装することでが好きで、本ブログでもスクールで習ったこととポートフォリオの作成もかねて多くの機能を取り入れました。
+                希望職種:サーバーサイドエンジニア。自分で考えて機能を実装することでが好きで、本ブログでもスクールで習ったこととポートフォリオの作成もかねて多くの機能を取り入れました。
               %p.profile-space
                 %br
                   本ブログで実装した機能は下記の通りとなっております。
@@ -107,3 +106,9 @@
 
 
   = render 'footer'
+
+:javascript
+  audiojs.events.ready(function() {
+    var as = audiojs.createAll();
+  });
+
