@@ -4,10 +4,8 @@ $(function(){
     
       var html = `<div class="comment">
                     <div class="comment-name clearfix">
-                      
                       <span>名前：</span>
                       ${comment.user_name}
-
                     </div>
                     <div class="comment-comment clearfix">
                       ${comment.comment}
@@ -65,11 +63,9 @@ $(function(){
                     <span>名前：</span>
                     ${comment.user_name}
                   </div>
-                  <p class="comment-comment clearfix">
+                  <div class="comment-comment clearfix">
                     ${comment.comment}
-    
- 
-                  </p>
+                  </div>
                 </div>`
     return html;
   }
