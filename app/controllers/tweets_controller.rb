@@ -80,6 +80,7 @@ class TweetsController < ApplicationController
     # @search = Tweet.search(search_params)
     # @tweets = @search.result(distinct: true).order(created_at: 'DESC')
     # binding.pry
+    
     respond_to do |format|
       format.html
       format.json
