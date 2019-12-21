@@ -185,7 +185,8 @@ p {
 
 .m-article {
 
-
+  // height: 700px;
+  // overflow: hidden;
   position: relative;
 
   display: flex;
@@ -202,7 +203,7 @@ p {
     &_profile{
       position: absolute;
 
-      top: 40px;
+      top: 30px;
       left: 500px;
 
       display: -webkit-box;
@@ -435,4 +436,8 @@ bottom: 5px;
 
 visibility:visible;
 cursor: pointer;
+}
+
+.profileh-height{
+  height: 700px;
 }
