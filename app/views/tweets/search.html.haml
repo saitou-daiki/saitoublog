@@ -12,8 +12,6 @@
       = image_tag 'greatbarrier.jpg', :height => "480", :width => "100%"
 
 
-
-
   .l-content
     
     .search-result 
@@ -31,23 +29,6 @@
       .m-article-lis.fadein
 
         = render @tweets
-
-      -# = paginate(@tweets)
-
-      %p.m-read#about
-        自己紹介
-      %article.m-article.js-article.wow.fadein.clearfix
-        %figure.m-article_image
-          = image_tag 'hawai.jpg', class: 'lower-message__image', width: '400px',height: '300px'
-        .m-article_text-block
-          .m-article_text-block-top
-            = link_to '#0' do
-              %h2.m-article_title 
-                名前：斎藤大輝
-              %p.m-article_date 
-                エンジニアとして就活中の斎藤と申します。
-              %p.m-article_summary 
-                某大手警備会社を退職後、TECH::EXPERTを卒業して就活中の身です。日々の備忘録としても活用できるといいと思い、こちらのブログを作成しました。
 
       %p.m-read#portfolio.white
         = link_to root_path do
