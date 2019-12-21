@@ -242,7 +242,7 @@ p {
       z-index: 1;
 
       height: 300px;
-      overflow: hidden;
+      overflow: scroll;
       a:hover{  
         opacity: 0.5;
       }
@@ -442,5 +442,5 @@ cursor: pointer;
 }
 
 .profileh-height{
-  height: 700px;
+  height: 650px;
 }
