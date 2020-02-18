@@ -19,8 +19,6 @@
         =  render partial: 'error-message', locals: {tweet: @tweet, column: "image"}
         = f.file_field :image, class: 'image hidden'
       
-
-
       .form-group 
       
         = f.collection_select :tag_ids, Tag.all, :id, :name,{prompt: "タグを選択してください"}, { class: "input-default has-error" }
