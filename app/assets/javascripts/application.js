@@ -13,7 +13,9 @@
 
 
 //= require audiojs
+
 //= require jquery
+
 //= require rails-ujs
 
 
