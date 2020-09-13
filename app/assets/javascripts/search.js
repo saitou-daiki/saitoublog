@@ -71,11 +71,11 @@ $(function(){
       dataType: 'json'
     })
   
-    .done(function(tweets){
+    .done(function(){
 
       search_list.empty();
-      
-      if (tweets.length !== 0){
+    
+      if (tweets.length !== 0){ 
 
         tweets.forEach(function(tweet){
 
